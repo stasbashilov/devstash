@@ -26,15 +26,15 @@
 
 Developers keep their essentials scattered across multiple tools and locations:
 
-| Resource | Common Location |
-| --- | --- |
-| Code snippets | VS Code, Notion, Gists |
-| AI prompts | Chat histories |
-| Context files | Buried in projects |
-| Useful links | Browser bookmarks |
-| Documentation | Random folders |
-| Commands | `.txt` files, bash history |
-| Templates | GitHub Gists |
+| Resource      | Common Location            |
+| ------------- | -------------------------- |
+| Code snippets | VS Code, Notion, Gists     |
+| AI prompts    | Chat histories             |
+| Context files | Buried in projects         |
+| Useful links  | Browser bookmarks          |
+| Documentation | Random folders             |
+| Commands      | `.txt` files, bash history |
+| Templates     | GitHub Gists               |
 
 **The Result:** Context switching, lost knowledge, and inconsistent workflows.
 
@@ -44,12 +44,12 @@ Developers keep their essentials scattered across multiple tools and locations:
 
 ## 👥 Target Users
 
-| User Type | Primary Needs |
-| --- | --- |
-| **Everyday Developer** | Fast access to snippets, prompts, commands, links |
-| **AI-First Developer** | Save prompts, contexts, workflows, system messages |
-| **Content Creator / Educator** | Store code blocks, explanations, course notes |
-| **Full-Stack Builder** | Collect patterns, boilerplates, API examples |
+| User Type                      | Primary Needs                                      |
+| ------------------------------ | -------------------------------------------------- |
+| **Everyday Developer**         | Fast access to snippets, prompts, commands, links  |
+| **AI-First Developer**         | Save prompts, contexts, workflows, system messages |
+| **Content Creator / Educator** | Store code blocks, explanations, course notes      |
+| **Full-Stack Builder**         | Collect patterns, boilerplates, API examples       |
 
 ---
 
@@ -57,35 +57,35 @@ Developers keep their essentials scattered across multiple tools and locations:
 
 Completed features as of the latest session:
 
-| Area | Status |
-| --- | --- |
-| Initial Setup (Next.js 16, Tailwind v4, TypeScript) | ✅ Done |
-| Dashboard UI (sidebar, top bar, responsive layout) | ✅ Done |
-| Prisma + Neon PostgreSQL (full schema + seed) | ✅ Done |
-| NextAuth v5 (email/password + GitHub OAuth) | ✅ Done |
-| Email verification & password reset (Resend) | ✅ Done |
-| Items CRUD (create, read, update, delete) | ✅ Done |
-| Item Drawer (slide-in detail/edit panel) | ✅ Done |
-| Code Editor (Monaco, macOS styling) | ✅ Done |
-| Markdown Editor (Write/Preview tabs, GFM) | ✅ Done |
-| File & Image Upload (Cloudflare R2) | ✅ Done |
-| Collections CRUD | ✅ Done |
-| Collection-Item assignment (many-to-many) | ✅ Done |
-| Global Search / Command Palette (Cmd+K) | ✅ Done |
-| Favorites & Pinning | ✅ Done |
-| Pagination | ✅ Done |
-| Tags | ✅ Done |
-| Rate Limiting (Upstash Redis) | ✅ Done |
-| Stripe (checkout, webhooks, billing portal) | ✅ Done |
-| Feature gating (Pro limits enforced) | ✅ Done |
-| AI Auto-Tagging (GPT, Pro only) | ✅ Done |
-| AI Description Generator (Pro only) | ✅ Done |
-| AI Explain Code (Pro only) | ✅ Done |
-| AI Prompt Optimizer (Pro only) | ✅ Done |
-| Import / Export (JSON free, ZIP Pro) | ✅ Done |
+| Area                                                   | Status  |
+| ------------------------------------------------------ | ------- |
+| Initial Setup (Next.js 16, Tailwind v4, TypeScript)    | ✅ Done |
+| Dashboard UI (sidebar, top bar, responsive layout)     | ✅ Done |
+| Prisma + Neon PostgreSQL (full schema + seed)          | ✅ Done |
+| NextAuth v5 (email/password + GitHub OAuth)            | ✅ Done |
+| Email verification & password reset (Resend)           | ✅ Done |
+| Items CRUD (create, read, update, delete)              | ✅ Done |
+| Item Drawer (slide-in detail/edit panel)               | ✅ Done |
+| Code Editor (Monaco, macOS styling)                    | ✅ Done |
+| Markdown Editor (Write/Preview tabs, GFM)              | ✅ Done |
+| File & Image Upload (Cloudflare R2)                    | ✅ Done |
+| Collections CRUD                                       | ✅ Done |
+| Collection-Item assignment (many-to-many)              | ✅ Done |
+| Global Search / Command Palette (Cmd+K)                | ✅ Done |
+| Favorites & Pinning                                    | ✅ Done |
+| Pagination                                             | ✅ Done |
+| Tags                                                   | ✅ Done |
+| Rate Limiting (Upstash Redis)                          | ✅ Done |
+| Stripe (checkout, webhooks, billing portal)            | ✅ Done |
+| Feature gating (Pro limits enforced)                   | ✅ Done |
+| AI Auto-Tagging (GPT, Pro only)                        | ✅ Done |
+| AI Description Generator (Pro only)                    | ✅ Done |
+| AI Explain Code (Pro only)                             | ✅ Done |
+| AI Prompt Optimizer (Pro only)                         | ✅ Done |
+| Import / Export (JSON free, ZIP Pro)                   | ✅ Done |
 | Settings page (password, delete account, editor prefs) | ✅ Done |
-| Homepage (marketing page, pricing toggle) | ✅ Done |
-| Vercel Analytics | ✅ Done |
+| Homepage (marketing page, pricing toggle)              | ✅ Done |
+| Vercel Analytics                                       | ✅ Done |
 
 ---
 
@@ -97,15 +97,15 @@ Items are the core unit of DevStash. Each item has a type that determines its be
 
 #### System Types (Immutable)
 
-| Type | Icon | Color | Content Type | Route |
-| --- | --- | --- | --- | --- |
-| 🔷 Snippet | `Code` | `#3b82f6` (blue) | Text | `/items/snippets` |
-| 🟣 Prompt | `Sparkles` | `#8b5cf6` (purple) | Text | `/items/prompts` |
-| 🟠 Command | `Terminal` | `#f97316` (orange) | Text | `/items/commands` |
-| 🟡 Note | `StickyNote` | `#fde047` (yellow) | Text | `/items/notes` |
-| ⚫ File | `File` | `#6b7280` (gray) | File | `/items/files` |
-| 🩷 Image | `Image` | `#ec4899` (pink) | File | `/items/images` |
-| 🟢 Link | `Link` | `#10b981` (emerald) | URL | `/items/links` |
+| Type       | Icon         | Color               | Content Type | Route             |
+| ---------- | ------------ | ------------------- | ------------ | ----------------- |
+| 🔷 Snippet | `Code`       | `#3b82f6` (blue)    | Text         | `/items/snippets` |
+| 🟣 Prompt  | `Sparkles`   | `#8b5cf6` (purple)  | Text         | `/items/prompts`  |
+| 🟠 Command | `Terminal`   | `#f97316` (orange)  | Text         | `/items/commands` |
+| 🟡 Note    | `StickyNote` | `#fde047` (yellow)  | Text         | `/items/notes`    |
+| ⚫ File    | `File`       | `#6b7280` (gray)    | File         | `/items/files`    |
+| 🩷 Image   | `Image`      | `#ec4899` (pink)    | File         | `/items/images`   |
+| 🟢 Link    | `Link`       | `#10b981` (emerald) | URL          | `/items/links`    |
 
 > **Note:** File and Image types are Pro-only features.
 
@@ -148,12 +148,12 @@ Users can organise items into collections. Items support many-to-many relationsh
 
 Powered by OpenAI GPT — all features are rate-limited (20 req/hr) and Pro-gated.
 
-| Feature | Description |
-| --- | --- |
-| 🤖 Auto-Tagging | Suggests relevant tags based on item content |
-| 📝 Description Generator | Generates a short description from title/content/URL |
-| 💡 Explain Code | Explains snippets/commands in plain language |
-| ⚡ Prompt Optimizer | Rewrites prompts for better AI results with accept/reject |
+| Feature                  | Description                                               |
+| ------------------------ | --------------------------------------------------------- |
+| 🤖 Auto-Tagging          | Suggests relevant tags based on item content              |
+| 📝 Description Generator | Generates a short description from title/content/URL      |
+| 💡 Explain Code          | Explains snippets/commands in plain language              |
+| ⚡ Prompt Optimizer      | Rewrites prompts for better AI results with accept/reject |
 
 ---
 
@@ -430,22 +430,22 @@ model Tag {
 
 ```typescript
 // prisma/seed.ts
-import { PrismaClient } from '@prisma/client';
+import { PrismaClient } from "@prisma/client";
 
 const prisma = new PrismaClient();
 
 const systemItemTypes = [
-  { name: 'snippet', icon: 'Code',       color: '#3b82f6', isSystem: true },
-  { name: 'prompt',  icon: 'Sparkles',   color: '#8b5cf6', isSystem: true },
-  { name: 'command', icon: 'Terminal',   color: '#f97316', isSystem: true },
-  { name: 'note',    icon: 'StickyNote', color: '#fde047', isSystem: true },
-  { name: 'file',    icon: 'File',       color: '#6b7280', isSystem: true },
-  { name: 'image',   icon: 'Image',      color: '#ec4899', isSystem: true },
-  { name: 'link',    icon: 'Link',       color: '#10b981', isSystem: true },
+  { name: "snippet", icon: "Code", color: "#3b82f6", isSystem: true },
+  { name: "prompt", icon: "Sparkles", color: "#8b5cf6", isSystem: true },
+  { name: "command", icon: "Terminal", color: "#f97316", isSystem: true },
+  { name: "note", icon: "StickyNote", color: "#fde047", isSystem: true },
+  { name: "file", icon: "File", color: "#6b7280", isSystem: true },
+  { name: "image", icon: "Image", color: "#ec4899", isSystem: true },
+  { name: "link", icon: "Link", color: "#10b981", isSystem: true },
 ];
 
 async function main() {
-  console.log('Seeding system item types...');
+  console.log("Seeding system item types...");
   for (const type of systemItemTypes) {
     await prisma.itemType.upsert({
       where: { name_userId: { name: type.name, userId: null } },
@@ -453,12 +453,17 @@ async function main() {
       create: type,
     });
   }
-  console.log('Seeding complete!');
+  console.log("Seeding complete!");
 }
 
 main()
-  .catch((e) => { console.error(e); process.exit(1); })
-  .finally(async () => { await prisma.$disconnect(); });
+  .catch((e) => {
+    console.error(e);
+    process.exit(1);
+  })
+  .finally(async () => {
+    await prisma.$disconnect();
+  });
 ```
 
 > **Database Migrations — Important**
@@ -530,21 +535,21 @@ flowchart TB
 
 ### Technology Choices
 
-| Category | Technology | Notes |
-| --- | --- | --- |
-| **Framework** | [Next.js 16](https://nextjs.org/docs) / React 19 | SSR pages, API routes, Server Actions |
-| **Language** | TypeScript (strict) | Type safety throughout |
-| **Database** | [Neon PostgreSQL](https://neon.tech/docs) | Serverless Postgres |
-| **ORM** | [Prisma 7](https://www.prisma.io/docs) | Full type safety |
-| **File Storage** | [Cloudflare R2](https://developers.cloudflare.com/r2) | S3-compatible object storage |
-| **Authentication** | [NextAuth v5](https://authjs.dev) | Email/password + GitHub OAuth |
-| **Email** | [Resend](https://resend.com/docs) | Verification & password reset |
-| **Rate Limiting** | [Upstash Redis](https://upstash.com/docs) | Sliding window on auth endpoints |
-| **AI** | [OpenAI GPT-4o Mini](https://platform.openai.com/docs) | Cost-effective for AI features |
-| **Styling** | [Tailwind CSS v4](https://tailwindcss.com/docs) + [shadcn/ui](https://ui.shadcn.com) | CSS-based config, accessible components |
-| **Payments** | [Stripe](https://stripe.com/docs/billing/subscriptions) | Subscriptions & billing portal |
-| **Testing** | [Vitest](https://vitest.dev) | Unit tests for actions & utilities |
-| **Analytics** | [Vercel Analytics](https://vercel.com/docs/analytics) | Page view tracking |
+| Category           | Technology                                                                           | Notes                                   |
+| ------------------ | ------------------------------------------------------------------------------------ | --------------------------------------- |
+| **Framework**      | [Next.js 16](https://nextjs.org/docs) / React 19                                     | SSR pages, API routes, Server Actions   |
+| **Language**       | TypeScript (strict)                                                                  | Type safety throughout                  |
+| **Database**       | [Neon PostgreSQL](https://neon.tech/docs)                                            | Serverless Postgres                     |
+| **ORM**            | [Prisma 7](https://www.prisma.io/docs)                                               | Full type safety                        |
+| **File Storage**   | [Cloudflare R2](https://developers.cloudflare.com/r2)                                | S3-compatible object storage            |
+| **Authentication** | [NextAuth v5](https://authjs.dev)                                                    | Email/password + GitHub OAuth           |
+| **Email**          | [Resend](https://resend.com/docs)                                                    | Verification & password reset           |
+| **Rate Limiting**  | [Upstash Redis](https://upstash.com/docs)                                            | Sliding window on auth endpoints        |
+| **AI**             | [OpenAI GPT-4o Mini](https://platform.openai.com/docs)                               | Cost-effective for AI features          |
+| **Styling**        | [Tailwind CSS v4](https://tailwindcss.com/docs) + [shadcn/ui](https://ui.shadcn.com) | CSS-based config, accessible components |
+| **Payments**       | [Stripe](https://stripe.com/docs/billing/subscriptions)                              | Subscriptions & billing portal          |
+| **Testing**        | [Vitest](https://vitest.dev)                                                         | Unit tests for actions & utilities      |
+| **Analytics**      | [Vercel Analytics](https://vercel.com/docs/analytics)                                | Page view tracking                      |
 
 > ⚠️ **Tailwind CSS v4 Note:** We use CSS-based configuration — do **not** create `tailwind.config.ts`. All theme config goes in `src/app/globals.css` using the `@theme` directive.
 
@@ -581,34 +586,34 @@ flowchart LR
 
 ### Feature Comparison
 
-| Feature | Free | Pro |
-| --- | :---: | :---: |
-| Items | 50 | Unlimited |
-| Collections | 3 | Unlimited |
-| Snippets, Prompts, Commands, Notes, Links | ✅ | ✅ |
-| Files & Images | ❌ | ✅ |
-| Global Search | ✅ | ✅ |
-| JSON Export | ✅ | ✅ |
-| ZIP Export | ❌ | ✅ |
-| Import | ✅ | ✅ |
-| Custom Types | ❌ | 🔜 Coming Soon |
-| AI Auto-tagging | ❌ | ✅ |
-| AI Description Generator | ❌ | ✅ |
-| AI Code Explanation | ❌ | ✅ |
-| AI Prompt Optimizer | ❌ | ✅ |
-| Priority Support | ❌ | ✅ |
+| Feature                                   | Free |      Pro       |
+| ----------------------------------------- | :--: | :------------: |
+| Items                                     |  50  |   Unlimited    |
+| Collections                               |  3   |   Unlimited    |
+| Snippets, Prompts, Commands, Notes, Links |  ✅  |       ✅       |
+| Files & Images                            |  ❌  |       ✅       |
+| Global Search                             |  ✅  |       ✅       |
+| JSON Export                               |  ✅  |       ✅       |
+| ZIP Export                                |  ❌  |       ✅       |
+| Import                                    |  ✅  |       ✅       |
+| Custom Types                              |  ❌  | 🔜 Coming Soon |
+| AI Auto-tagging                           |  ❌  |       ✅       |
+| AI Description Generator                  |  ❌  |       ✅       |
+| AI Code Explanation                       |  ❌  |       ✅       |
+| AI Prompt Optimizer                       |  ❌  |       ✅       |
+| Priority Support                          |  ❌  |       ✅       |
 
 > **Development Note:** Pro gating is implemented. During active development, set `isPro = true` on your seed user to test Pro features freely.
 
 ### Stripe Webhooks Handled
 
-| Event | Action |
-| --- | --- |
-| `checkout.session.completed` | Activate Pro, store subscription ID |
-| `invoice.paid` | Confirm Pro active |
-| `invoice.payment_failed` | Log failure |
-| `customer.subscription.updated` | Sync subscription status |
-| `customer.subscription.deleted` | Revoke Pro |
+| Event                           | Action                              |
+| ------------------------------- | ----------------------------------- |
+| `checkout.session.completed`    | Activate Pro, store subscription ID |
+| `invoice.paid`                  | Confirm Pro active                  |
+| `invoice.payment_failed`        | Log failure                         |
+| `customer.subscription.updated` | Sync subscription status            |
+| `customer.subscription.deleted` | Revoke Pro                          |
 
 ---
 
@@ -627,6 +632,14 @@ flowchart LR
 - [Notion](https://notion.so) — Clean organisation
 - [Linear](https://linear.app) — Modern dev aesthetic
 - [Raycast](https://raycast.com) — Quick access patterns
+
+### Screenshots
+
+Refer to the screenshots below as a base for the dashboard UI.
+It does not have to be exact. Use it as a reference:
+
+- @context/screenshots/devstash_drawer.png
+- @context/screenshots/devstash_main_dashboard.png
 
 ### Layout Structure
 
@@ -657,26 +670,34 @@ flowchart LR
 
 ```typescript
 // src/lib/constants/item-types.ts
-import { Code, Sparkles, Terminal, StickyNote, File, Image, Link } from 'lucide-react';
+import {
+  Code,
+  Sparkles,
+  Terminal,
+  StickyNote,
+  File,
+  Image,
+  Link,
+} from "lucide-react";
 
 export const ITEM_TYPE_ICONS = {
   snippet: Code,
-  prompt:  Sparkles,
+  prompt: Sparkles,
   command: Terminal,
-  note:    StickyNote,
-  file:    File,
-  image:   Image,
-  link:    Link,
+  note: StickyNote,
+  file: File,
+  image: Image,
+  link: Link,
 } as const;
 
 export const ITEM_TYPE_COLORS = {
-  snippet: '#3b82f6',  // Blue
-  prompt:  '#8b5cf6',  // Purple
-  command: '#f97316',  // Orange
-  note:    '#fde047',  // Yellow
-  file:    '#6b7280',  // Gray
-  image:   '#ec4899',  // Pink
-  link:    '#10b981',  // Emerald
+  snippet: "#3b82f6", // Blue
+  prompt: "#8b5cf6", // Purple
+  command: "#f97316", // Orange
+  note: "#fde047", // Yellow
+  file: "#6b7280", // Gray
+  image: "#ec4899", // Pink
+  link: "#10b981", // Emerald
 } as const;
 ```
 
@@ -684,22 +705,22 @@ export const ITEM_TYPE_COLORS = {
 /* src/app/globals.css */
 @theme {
   --color-snippet: #3b82f6;
-  --color-prompt:  #8b5cf6;
+  --color-prompt: #8b5cf6;
   --color-command: #f97316;
-  --color-note:    #fde047;
-  --color-file:    #6b7280;
-  --color-image:   #ec4899;
-  --color-link:    #10b981;
+  --color-note: #fde047;
+  --color-file: #6b7280;
+  --color-image: #ec4899;
+  --color-link: #10b981;
 }
 ```
 
 ### Responsive Behaviour
 
-| Viewport | Sidebar | Layout |
-| --- | --- | --- |
-| Desktop (≥1024px) | Visible, collapsible | Full sidebar + main content |
-| Tablet (768–1023px) | Drawer (hidden by default) | Full-width main content |
-| Mobile (<768px) | Drawer (hidden by default) | Stacked cards, simplified grid |
+| Viewport            | Sidebar                    | Layout                         |
+| ------------------- | -------------------------- | ------------------------------ |
+| Desktop (≥1024px)   | Visible, collapsible       | Full sidebar + main content    |
+| Tablet (768–1023px) | Drawer (hidden by default) | Full-width main content        |
+| Mobile (<768px)     | Drawer (hidden by default) | Stacked cards, simplified grid |
 
 ### Micro-interactions
 
@@ -818,12 +839,12 @@ Every feature or fix follows this process — no exceptions:
 
 ### File Naming
 
-| Thing | Convention |
-| --- | --- |
-| Components | `PascalCase.tsx` |
-| Files/routes | `kebab-case` |
-| Functions | `camelCase` |
-| Constants | `SCREAMING_SNAKE_CASE` |
+| Thing            | Convention               |
+| ---------------- | ------------------------ |
+| Components       | `PascalCase.tsx`         |
+| Files/routes     | `kebab-case`             |
+| Functions        | `camelCase`              |
+| Constants        | `SCREAMING_SNAKE_CASE`   |
 | Types/Interfaces | `PascalCase` (no prefix) |
 
 ### Data Fetching & Validation
@@ -855,31 +876,31 @@ Every feature or fix follows this process — no exceptions:
 
 ### Free Tier Ideas
 
-| Feature | Effort | Notes |
-| --- | --- | --- |
-| Duplicate item | Low | One query + dialog |
-| Tags page | Low | Browse/filter by tag |
-| Item sorting | Low | Name, date created, date updated |
-| Keyboard shortcuts | Medium | Vim-style navigation (`n` new, `f` favourite) |
-| Trash / soft delete | Medium | 30-day recovery bin |
-| Markdown preview in cards | Low | Rendered snippet in note/prompt cards |
-| Public sharing | Medium | Read-only link per item (like a Gist) |
-| Dark/Light theme toggle | Low | Light mode option |
+| Feature                   | Effort | Notes                                         |
+| ------------------------- | ------ | --------------------------------------------- |
+| Duplicate item            | Low    | One query + dialog                            |
+| Tags page                 | Low    | Browse/filter by tag                          |
+| Item sorting              | Low    | Name, date created, date updated              |
+| Keyboard shortcuts        | Medium | Vim-style navigation (`n` new, `f` favourite) |
+| Trash / soft delete       | Medium | 30-day recovery bin                           |
+| Markdown preview in cards | Low    | Rendered snippet in note/prompt cards         |
+| Public sharing            | Medium | Read-only link per item (like a Gist)         |
+| Dark/Light theme toggle   | Low    | Light mode option                             |
 
 ### Pro Tier Ideas
 
-| Feature | Effort | Notes |
-| --- | --- | --- |
-| AI Chat | High | "Find my React auth snippet" natural language search |
-| Bulk operations | Medium | Multi-select to move, tag, delete |
-| Version history | High | Diff view, restore previous versions |
-| Import from GitHub Gists | Medium | Pull existing Gists as snippets |
-| Team sharing | High | Share collections (read/edit) |
-| REST API + API keys | High | CLI tools, browser extensions |
-| VS Code extension | High | Save snippets directly from editor |
-| AI auto-categorise | Medium | Suggests type, collection, tags on import |
-| Nested collections | Medium | Sub-collections |
-| Custom item types | Medium | User-defined with custom icons/colors |
+| Feature                  | Effort | Notes                                                |
+| ------------------------ | ------ | ---------------------------------------------------- |
+| AI Chat                  | High   | "Find my React auth snippet" natural language search |
+| Bulk operations          | Medium | Multi-select to move, tag, delete                    |
+| Version history          | High   | Diff view, restore previous versions                 |
+| Import from GitHub Gists | Medium | Pull existing Gists as snippets                      |
+| Team sharing             | High   | Share collections (read/edit)                        |
+| REST API + API keys      | High   | CLI tools, browser extensions                        |
+| VS Code extension        | High   | Save snippets directly from editor                   |
+| AI auto-categorise       | Medium | Suggests type, collection, tags on import            |
+| Nested collections       | Medium | Sub-collections                                      |
+| Custom item types        | Medium | User-defined with custom icons/colors                |
 
 ---
 
