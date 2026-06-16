@@ -24,3 +24,13 @@
 - Configured project structure, CLAUDE.md, and context files
 - Removed default Next.js boilerplate (SVGs, placeholder page)
 - Pushed initial commit to `stasbashilov/devstash` on GitHub
+
+### 2026-06-16 — Dashboard UI Phase 1
+
+- Initialized ShadCN UI (base-nova style, neutral base color) and installed `button`, `input` components
+- Created `(dashboard)` route group with shared layout, and `/dashboard` route
+- Added `TopBar` component (search input + "New Item" button, display only)
+- Added `Sidebar` placeholder component (`h2` "Sidebar"); `/dashboard` page renders placeholder `h2` "Main"
+- Set dark mode as default via `dark` class on `html`
+- Fixed circular `--font-sans` token in `globals.css` introduced by ShadCN init so Geist fonts apply correctly
+- Verified with `npm run build` and `npm run lint`
