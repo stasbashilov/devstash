@@ -1,18 +1,26 @@
 # Current Feature
 
-<!-- Feature name and short description -->
+Dashboard UI Phase 3 — main content area (recent collections, pinned items, recent items, stats cards). Final phase of the dashboard UI layout (3 of 3).
 
 ## Status
 
-<!-- Not started | In Progress | Completed -->
+In Progress
 
 ## Goals
 
 <!-- Goals and requirements -->
 
+- Build the main area to the right of the sidebar
+- Recent collections
+- Pinned Items
+- 10 Recent items
+- 4 stats cards at the top: number of items, collections, favorite items, favorite collections (not in screenshot)
+
 ## Notes
 
-<!-- Any extra notes -->
+- Full spec: @context/features/dashboard-phase-3-spec.md
+- Use mock data from `src/lib/mock-data.js` directly (no database yet)
+- Reference screenshot: @context/screenshots/dashboard-ui-main.png
 
 ## History
 
