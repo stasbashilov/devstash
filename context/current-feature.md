@@ -1,26 +1,29 @@
 # Current Feature
 
-Dashboard UI Phase 3 — main content area (recent collections, pinned items, recent items, stats cards). Final phase of the dashboard UI layout (3 of 3).
+Prisma + Neon PostgreSQL setup. Introduces the database layer (initial schema, migrations) that the dashboard UI has so far only mocked.
 
 ## Status
 
-In Progress
+Completed
 
 ## Goals
 
 <!-- Goals and requirements -->
 
-- Build the main area to the right of the sidebar
-- Recent collections
-- Pinned Items
-- 10 Recent items
-- 4 stats cards at the top: number of items, collections, favorite items, favorite collections (not in screenshot)
+- Set up Prisma ORM with Neon PostgreSQL (serverless)
+- Use Prisma 7 (breaking changes vs. earlier versions)
+- Create initial schema based on the data models in `project-overview.md` (expected to evolve)
+- Include NextAuth models (Account, Session, VerificationToken)
+- Add appropriate indexes and cascade deletes
+- Always create migrations (`prisma migrate dev`) — never `db push` — since we'll have separate development and production database branches
 
 ## Notes
 
-- Full spec: @context/features/dashboard-phase-3-spec.md
-- Use mock data from `src/lib/mock-data.js` directly (no database yet)
-- Reference screenshot: @context/screenshots/dashboard-ui-main.png
+- Full spec: @context/features/database-spec.md
+- Initial data models: @context/project-overview.md
+- Prisma docs: https://prisma.io/docs (Prisma 7 has breaking changes — fetch latest)
+- Prisma 7 upgrade guide: https://www.prisma.io/docs/orm/more/upgrade-guides/upgrading-versions/upgrading-to-prisma-7
+- Prisma quickstart: https://www.prisma.io/docs/getting-started/prisma-orm/quickstart/prisma-postgres
 
 ## History
 
@@ -51,3 +54,23 @@ In Progress
 - `TopBar`: added the sidebar toggle button (`PanelLeftClose`/`PanelLeftOpen`) and a ⌘K hint in the search input
 - Added `src/lib/constants/item-types.ts` for icon/color lookup by type name
 - Verified with `npm run build` and `npm run lint`
+
+### 2026-06-24 — Dashboard UI Phase 3
+
+- Added `StatsCards` (4 cards: items, collections, favorite items, favorite collections)
+- Added `CollectionCard` for the recent collections grid and `ItemRow` for the recent items list (10 items)
+- Built out pinned items section on `/dashboard`, all sourced from `src/lib/mock-data.js` (no database yet)
+- Added base `Card` UI component
+- Verified with `npm run build` and `npm run lint`
+- Completed all 3 phases of the dashboard UI layout (sidebar, top bar, main content area)
+
+### 2026-07-07 — Prisma + Neon PostgreSQL Setup
+
+- Installed Prisma 7 (`prisma`, `@prisma/client`, `@prisma/adapter-pg`, `pg`, `dotenv`, `tsx`); driver adapters are now mandatory and env vars are no longer auto-loaded, so `prisma.config.ts` and every standalone script explicitly `import "dotenv/config"`
+- Wrote `prisma/schema.prisma` with the full data model from `project-overview.md`: `User`, NextAuth models (`Account`, `Session`, `VerificationToken`), `Item`, `ItemType`, `Collection`, `ItemCollection`, `Tag`, `ContentType` enum — with indexes and cascade deletes
+- Generator now outputs the client to `src/generated/prisma` (gitignored) instead of `node_modules`, per Prisma 7's mandatory `output` path
+- Added `src/lib/prisma.ts` client singleton using the `@prisma/adapter-pg` driver adapter
+- Added `prisma/seed.ts` for system item types; seeding is no longer automatic with migrations in Prisma 7, so it's wired via `migrations.seed` in `prisma.config.ts` and run with `npx prisma db seed`
+- Neon dev branch DB already had the schema applied from earlier untracked work (no local migration history); baselined it with a generated `migration.sql` + `prisma migrate resolve --applied` instead of resetting — no data loss, no `db push` used
+- Added `scripts/test-db.ts` and `db:test`/`db:migrate`/`db:generate`/`db:seed`/`db:studio` npm scripts
+- Verified with `npm run build`, `npm run lint`, and `npm run db:test` against the live Neon dev database
